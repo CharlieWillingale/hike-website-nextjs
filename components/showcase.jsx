@@ -1,10 +1,9 @@
-import style from '../styles/Showcase.module.css'
 import Image from 'next/image'
 
 function Showcase(props) {
     return(
-        <section className={style.showcaseSection}>
-            <div className={style.showcaseImage}>
+        <section className='flex justify-center h-30v'>
+            <div className='my-auto p-1'>
                 <Image 
                     src={'/images/siteLogo.png'}
                     alt='Website logo.'
@@ -12,9 +11,9 @@ function Showcase(props) {
                     height={100}
                     />
             </div>
-            <div className={style.titles}>
+            <div className='my-auto p-1.5'>
                 {props.title.split('\n').map(word =>
-                    <h1 className={style.title}>{word}</h1>
+                    <h1 className='p-0'>{word}</h1>
                     )}
             </div>
         </section>
