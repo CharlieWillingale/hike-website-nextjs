@@ -5,8 +5,8 @@ function Showcase(props) {
         <section className='flex justify-center h-30v'>
             <div className='my-auto p-1'>
                 <Image 
-                    src={'/images/siteLogo.png'}
-                    alt='Website logo.'
+                    src={props.showcaseImage}
+                    alt={props.showcaseAltTxt}
                     width={100}
                     height={100}
                     />
@@ -21,7 +21,10 @@ function Showcase(props) {
 }
 
 Showcase.defaultProps = {
-    title: "Oops! Title Missing!"
+    title: "Oops! Title Missing!",
+    showcaseImage:'/images/siteLogo.png',
+    showcaseAltTxt:'Website logo.'
+
 }
 
 export default Showcase
