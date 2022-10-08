@@ -2,12 +2,13 @@ import Image from 'next/image'
 
 function Card(props) {
     return(
-        <section className='h-60v w-10/12 border-main-orange border-solid border-2 rounded bg-slate-700 mx-auto'>
-               <article className='mx-auto my-[5.5%] min-h-[93%] w-[90%]'>
+        <section className='h-60v w-10/12 border-main-orange border-solid border-2 rounded bg-slate-700 mx-auto bg-dark-grey'>
+               <article className='mx-auto my-[5.5%] min-h-[93%] w-[90%] p-3 flex flex-col justify-between bg-light-grey'>
 
+                    <h3>{props.cardTitle}</h3>
                     <Image
-                        src='/images/siteLogo.png'
-                        alt='whwhcuwhb'
+                        src={props.cardImage}
+                        alt={props.cardImageAlt}
                         height={100}
                         width={100}
                         className=''
@@ -30,6 +31,7 @@ function Card(props) {
                         </li>
                     </ul>
 
+                    <div></div>
 
                 </article>
         </section>
@@ -37,7 +39,8 @@ function Card(props) {
 }
 
 Card.defaultProps = {
-
+    cardTitle: 'No Tilte :(',
+    cardImage: '/images/siteLogo.png'
 
 }
 

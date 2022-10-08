@@ -20,6 +20,8 @@ module.exports = {
 		},
 	colors: {
 		'main-orange': '#FC9126',
+		'dark-grey': '#D0D0D0',
+		'light-grey': '#EFEFEF'
 		},
   },
   plugins: [],
