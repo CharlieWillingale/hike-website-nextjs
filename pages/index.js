@@ -2,10 +2,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Showcase from '../components/showcase'
 import Card from '../components/card'
+import Link from 'next/link'
 
 import { getSortedPostsData } from '../lib/posts';
 
+
 export default function Home({allPostsData}) {
+  
   return (
     <>
       <Head>
@@ -14,13 +17,19 @@ export default function Home({allPostsData}) {
       <Showcase title={'Hike.\nClimb.\nBike.'} />
 
       <ul>
-          {allPostsData.map(({ id, date, title }) => (
-            <li key={id}>
-              {title}
-              <br />
-              {id}
-              <br />
-              {date}
+          <h2 className='px-5 text-main-orange'>Latest posts</h2>
+          {allPostsData.map(({ id, title,routeImageUrl,routeImageAlt,routeSampleText,routeDistance,routeElevation,routeDifficulty}) => (
+            <li key={id} className='my-4'>
+                <Card 
+                  cardSlug={id}
+                  cardTitle={title}
+                  cardImage={routeImageUrl}
+                  cardImageAlt={routeImageAlt}
+                  cardSampleText={routeSampleText}
+                  cardDistance={routeDistance}
+                  cardElevation={routeElevation}
+                  cardDifficulty={routeDifficulty}
+                />
             </li>
           ))}
         </ul>
