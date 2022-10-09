@@ -13,11 +13,13 @@ export default function Home({allPostsData}) {
       <Showcase title={'Hike.\nClimb.\nBike.'} />
 
       <ul>
-          {allPostsData.map(() => (
-            <li key={allPostsData.id}>
-              {allPostsData.title}
+          {allPostsData.map(({ id, date, title }) => (
+            <li key={id}>
+              {title}
               <br />
-              {allPostsData.date}
+              {id}
+              <br />
+              {date}
             </li>
           ))}
         </ul>
