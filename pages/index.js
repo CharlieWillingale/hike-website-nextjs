@@ -1,12 +1,39 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import Showcase from '../components/showcase'
 
-export default function Home() {
+import { getSortedPostsData } from '../lib/posts';
+
+export default function Home({allPostsData}) {
   return (
     <>
+      <Head>
+        <title>Hike Site | Home</title>
+      </Head>
       <Showcase title={'Hike.\nClimb.\nBike.'} />
+
+      <ul>
+          {allPostsData.map(({ id, date, title }) => (
+            <li key={id}>
+              {title}
+              <br />
+              {id}
+              <br />
+              {date}
+            </li>
+          ))}
+        </ul>
+
+
     </>
   )
+}
+
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
 }
