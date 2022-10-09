@@ -29,19 +29,19 @@ function Card(props) {
                         {/* Card Distance Fields */}
                         <li className='flex justify-between m-auto w-5/6'>
                             <p>Distance</p>
-                            <p>{props.cardDistance}</p>
+                            <p>{props.cardDistance}km</p>
                         </li>
 
                         {/* Card Elevation Fields */}
                         <li className='flex justify-between m-auto w-5/6'>
                             <p>Elevation Gain</p>
-                            <p>{props.cardElevation}</p>
+                            <p>{props.cardElevation}m</p>
                         </li>
 
                         {/* Card Difficulty Fields */}
                         <li className='flex justify-between m-auto w-5/6'>
                             <p>Technical Difficulty</p>
-                            <p>{props.cardDifficulty}</p>
+                            <p>{props.cardDifficulty}/5</p>
                         </li>
                     </ul>
 
