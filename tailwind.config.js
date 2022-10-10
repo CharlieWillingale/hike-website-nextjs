@@ -18,6 +18,12 @@ module.exports = {
 			"90v": "90vh",
 			"100v": "100vh",
 		},
+	colors: {
+		'main-orange': '#FC9126',
+		'dark-grey': '#D0D0D0',
+		'light-grey': '#EFEFEF',
+		'font-grey': '#666666'
+		},
   },
   plugins: [],
 }
