@@ -4,7 +4,7 @@ import Link from 'next/link'
 function Card(props) {
 
     return(
-        <section className='text-font-grey h-60v w-10/12 border-main-orange border-solid border-2 rounded bg-slate-700 mx-auto bg-dark-grey'>
+        <section className='text-font-grey w-10/12 border-main-orange border-solid border-2 rounded bg-slate-700 mx-auto bg-dark-grey'>
                <article className='mx-auto my-[5.5%] min-h-[93%] w-[90%] p-3 flex flex-col justify-between bg-light-grey'>
 
                     <div>
@@ -22,7 +22,7 @@ function Card(props) {
                     </div>
 
                     {/* Card Sample Text*/}
-                    <p className='text-[10px]'>{props.cardSampleText}</p>
+                    <p className='text-[10px] py-2'>{props.cardSampleText}</p>
 
                     <ul className='flex flex-col border-y-2 border-main-orange mb-4 py-3'>
                         
