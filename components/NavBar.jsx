@@ -37,13 +37,22 @@ function NavBar(props) {
                 </li>
             </ul>
 
-            <ul className={`${isCollapsed ? 'opacity-0' : 'opacity-100'} w-1/2 h-100v bg-dark-grey absolute right-0 top-0 z-20 transition-all`}>
-                <li onClick={onMenuClick} className={`${isCollapsed ? 'opacity-0 pointer-events-none' : 'opacity-100'} delay-75 transition`}>
-                    <Link href='/'>
-                        Home
+            <div className={`${isCollapsed ? 'opacity-0' : 'opacity-90'} w-1/2 h-100v bg-main-orange absolute right-0 top-0 z-20 transition-all text-2xl`}>
+                <nav  className={`${isCollapsed ? 'opacity-0 pointer-events-none' : 'opacity-100'} delay-75 transition flex flex-col my-auto mx-5 justify-around h-80v w-1/2`}>
+                    <Link  href='/'>
+                        <a onClick={onMenuClick}>Home</a>
                     </Link>
-                </li>
-            </ul>
+                    <Link onClick={onMenuClick} href='/'>
+                        <a onClick={onMenuClick}>Bike</a>
+                    </Link>
+                    <Link onClick={onMenuClick} href='/'>
+                        <a onClick={onMenuClick}>Climb</a>
+                    </Link>
+                    <Link onClick={onMenuClick} href='/'>
+                        <a onClick={onMenuClick}>Hike</a>
+                    </Link>
+                </nav>
+            </div>
         </div>
     )
 }
