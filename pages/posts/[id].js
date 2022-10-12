@@ -1,16 +1,30 @@
+import Showcase from '../../components/showcase';
+import Image from 'next/image';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 
 export default function Post({postData}) {
     return (
-        <div>
-            {postData.title}
-            <br />
-            {postData.id}
-            <br />
-            {postData.date}
-            <br />
-            <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-        </div>
+
+      
+      <div>
+        <Showcase title={postData.title} />
+
+        <section className='w-11/12 m-auto'>
+          <article>
+            <p>{postData.routeSampleText}</p>
+          </article>
+          <br/>
+          <Image 
+            src={postData.routeImageUrl}
+            alt={postData.routeImageAlt}
+            width={400}
+            height={200}
+            className='m-auto'
+          />
+          <br/>
+            <article dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        </section>
+      </div>
     );
 }
 

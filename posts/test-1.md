@@ -1,12 +1,14 @@
 ---
 title: 'Test 1 blog'
 date: '2022-10-09'
+author: 'Charlie Willingale'
 routeImageUrl: '/images/sampleImg.jpg'
 routeImageAlt: 'site logo'
 routeSampleText: 'Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.'
 routeDistance: '1000'
 routeElevation: '4000'
 routeDifficulty: '3'
+category: 'ride'
 ---
 
 Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
