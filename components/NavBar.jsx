@@ -4,7 +4,7 @@ import { useState } from "react"
 
 function NavBar(props) {
 
-    const [isCollapsed, setIsCollapsed] = useState(false)
+    const [isCollapsed, setIsCollapsed] = useState(true)
 
     const onMenuClick = () => {
         isCollapsed ? setIsCollapsed(false) : setIsCollapsed(true)    
@@ -37,18 +37,18 @@ function NavBar(props) {
                 </li>
             </ul>
 
-            <div className={`${isCollapsed ? 'opacity-0' : 'opacity-90'} w-1/2 h-100v bg-main-orange absolute right-0 top-0 z-20 transition-all text-2xl`}>
+            <div className={`${isCollapsed ? 'opacity-0' : 'opacity-90'} w-1/2 h-100v bg-main-orange fixed right-0 top-0 z-20 transition-all text-2xl`}>
                 <nav  className={`${isCollapsed ? 'opacity-0 pointer-events-none' : 'opacity-100'} delay-75 transition flex flex-col my-auto mx-5 justify-around h-80v w-1/2`}>
                     <Link  href='/'>
                         <a onClick={onMenuClick}>Home</a>
                     </Link>
-                    <Link onClick={onMenuClick} href='/'>
+                    <Link href='/'>
                         <a onClick={onMenuClick}>Bike</a>
                     </Link>
-                    <Link onClick={onMenuClick} href='/'>
+                    <Link href='/'>
                         <a onClick={onMenuClick}>Climb</a>
                     </Link>
-                    <Link onClick={onMenuClick} href='/'>
+                    <Link href='/'>
                         <a onClick={onMenuClick}>Hike</a>
                     </Link>
                 </nav>

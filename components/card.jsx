@@ -46,7 +46,7 @@ function Card(props) {
                     </ul>
 
                     <Link href={`/posts/${props.cardSlug}`} className='cursor-pointer hover:text-main-orange focus:text-main-orange'>
-                        <button class="bg-transparent hover:bg-main-orange text-main-orange font-semibold hover:text-white py-2 px-4 border border-main-orange hover:border-transparent rounded">
+                        <button className="bg-transparent hover:bg-main-orange text-main-orange font-semibold hover:text-white py-2 px-4 border border-main-orange hover:border-transparent rounded">
                             Read More!
                         </button>
                     </Link>
