@@ -15,8 +15,9 @@ function Card(props) {
                         <Image
                             src={props.cardImage}
                             alt={props.cardImageAlt}
-                            height={200}
-                            width={350}
+                            layout='responsive'
+                            height={75}
+                            width={100}
                             className=''
                         />
                     </div>
