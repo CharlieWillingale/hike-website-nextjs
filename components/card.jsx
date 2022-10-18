@@ -3,6 +3,8 @@ import Link from 'next/link'
 
 function Card(props) {
 
+    const firstWordPos = props.cardSampleText.split(' ')[0].length
+
     return(
         <section className='text-font-grey w-10/12 border-main-orange border-solid border-2 rounded bg-slate-700 mx-auto bg-dark-grey'>
                <article className='mx-auto my-[5.5%] min-h-[93%] w-[90%] p-3 flex flex-col justify-between bg-light-grey'>
@@ -23,7 +25,7 @@ function Card(props) {
                     </div>
 
                     {/* Card Sample Text*/}
-                    <p className='text-[10px] py-2'>{props.cardSampleText}</p>
+                    <p className='text-[12px] py-2'> <span className='text-main-orange font-bold'>{props.cardSampleText.slice(0,firstWordPos)}</span>{props.cardSampleText.slice(firstWordPos)}</p>
 
                     <ul className='flex flex-col border-y-2 border-main-orange mb-4 py-3'>
                         
@@ -46,8 +48,8 @@ function Card(props) {
                         </li>
                     </ul>
 
-                    <Link href={`/posts/${props.cardSlug}`} className='cursor-pointer hover:text-main-orange focus:text-main-orange'>
-                        <button className="bg-transparent hover:bg-main-orange text-main-orange font-semibold hover:text-white py-2 px-4 border border-main-orange hover:border-transparent rounded">
+                    <Link href={`/posts/${props.cardSlug}`} className='cursor-pointer'>
+                        <button className="bg-transparent hover:bg-main-orange text-main-orange font-semibold hover:text-light-grey py-2 px-4 border border-main-orange hover:border-transparent rounded">
                             Read More!
                         </button>
                     </Link>
