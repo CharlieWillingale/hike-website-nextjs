@@ -14,7 +14,7 @@ export default function Home({allPostsData}) {
       <Head>
         <title>Hike Site | Home</title>
       </Head>
-      <Showcase title={'Hike.\nClimb.\nBike.'} />
+      <Showcase title={'Hike. Climb. Bike.'} />
 
       <ul>
           <h2 className='px-5 text-main-orange'>Latest posts</h2>

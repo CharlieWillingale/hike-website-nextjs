@@ -12,7 +12,7 @@ function Showcase(props) {
                     />
             </div>
             <div className='my-auto p-1.5'>
-                {props.title.split('\n').map(word =>
+                {props.title.split(' ').map(word =>
                     <h1 key={word} className='p-0'>{word}</h1>
                     )}
             </div>
