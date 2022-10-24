@@ -6,7 +6,7 @@ function Card(props) {
     const firstWordPos = props.cardSampleText.split(' ')[0].length
 
     return(
-        <section className='text-font-grey w-10/12 border-main-orange border-solid border-2 rounded bg-slate-700 mx-auto bg-dark-grey'>
+        <section className='text-font-grey w-10/12 md:min-w-[250px] border-main-orange border-solid border-2 rounded bg-slate-700 mx-auto bg-dark-grey'>
                <article className='mx-auto my-[5.5%] min-h-[93%] w-[90%] p-3 flex flex-col justify-between bg-light-grey'>
 
                     <div>

@@ -16,23 +16,25 @@ export default function Home({allPostsData}) {
       </Head>
       <Showcase title={'Hike. Climb. Bike.'} />
 
-      <ul>
+      <main>
           <h2 className='px-5 text-main-orange'>Latest posts</h2>
-          {allPostsData.map(({ id, title,routeImageUrl,routeImageAlt,routeSampleText,routeDistance,routeElevation,routeDifficulty}) => (
-            <li key={id} className='my-4'>
-                <Card 
-                  cardSlug={id}
-                  cardTitle={title}
-                  cardImage={routeImageUrl}
-                  cardImageAlt={routeImageAlt}
-                  cardSampleText={routeSampleText}
-                  cardDistance={routeDistance}
-                  cardElevation={routeElevation}
-                  cardDifficulty={routeDifficulty}
-                />
-            </li>
-          ))}
-        </ul>
+          <section className='flex flex-col lg:flex-row'>
+            {allPostsData.slice(0,3).map(({ id, title,routeImageUrl,routeImageAlt,routeSampleText,routeDistance,routeElevation,routeDifficulty}) => (
+              <article key={id} className='my-4'>
+                  <Card 
+                    cardSlug={id}
+                    cardTitle={title}
+                    cardImage={routeImageUrl}
+                    cardImageAlt={routeImageAlt}
+                    cardSampleText={routeSampleText}
+                    cardDistance={routeDistance}
+                    cardElevation={routeElevation}
+                    cardDifficulty={routeDifficulty}
+                  />
+              </article>
+            ))}
+          </section>
+        </main>
 
 
     </>
