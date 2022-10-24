@@ -11,7 +11,7 @@ function NavBar(props) {
     }
 
     return(
-        <div className="w-full " id="nav">
+        <div className={`w-full`} id="nav">
 
             {/* Home Logo nav to Home */}
             <ul className="flex justify-between my-auto mx-2 min-h-10v p-3 border-b-2 border-main-orange">
@@ -30,15 +30,15 @@ function NavBar(props) {
                 {/* Mobile Nav */}
                 
                     {/* Burger menu */}
-                <li className=' my-auto mx-5 z-50 cursor-pointer' onClick={onMenuClick} >
-                    <div className={`${isCollapsed ? 'rotate-0' : 'rotate-45 top-1 md:top-2 relative'} transition-all rounded w-6 md:w-12 p-0.5 md:p-1 my-1 md:my-3 bg-font-grey`}></div>
+                <li className='my-auto mx-5 z-50 cursor-pointer lg:hidden' onClick={onMenuClick} >
+                    <div className={`${isCollapsed ? 'rotate-0' : 'rotate-45 top-8 right-9 md:top-10  fixed'} transition-all rounded w-6 md:w-12 p-0.5 md:p-1 my-1 md:my-3 bg-font-grey`}></div>
                     <div className={`${isCollapsed ? 'block' : 'hidden'} rounded w-3 md:w-6 p-0.5 md:p-1 ml-3 md:ml-6 bg-dark-grey`}></div>
-                    <div className={`${isCollapsed ? 'rotate-0' : '-rotate-45 bottom-1 md:bottom-3 relative'} transition-all rounded w-6 md:w-12 p-0.5 md:p-1 my-1 md:my-3 bg-font-grey`}></div>
+                    <div className={`${isCollapsed ? 'rotate-0' : '-rotate-45 top-8 right-9 md:top-10 fixed'} transition-all rounded w-6 md:w-12  p-0.5 md:p-1 my-1 md:my-3 bg-font-grey`}></div>
                 </li>
-            </ul>
+            
 
-            <div className={`${isCollapsed ? 'opacity-0 h-1' : 'opacity-90 w-1/2 h-100v'}  bg-main-orange fixed right-0 top-0 z-20 transition-all text-2xl`}>
-                <nav  className={`${isCollapsed ? 'opacity-0 pointer-events-none flex h-1 flex-row' : 'flex-col h-80v w-1/2'} flex  my-auto mx-5 justify-around`}>
+            <div className={`${isCollapsed ? 'opacity-0 h-1' : 'opacity-90 w-1/2 h-100v'}  bg-main-orange lg:bg-[#fff] lg:relative fixed right-0 top-0 z-20 transition-all text-2xl lg:opacity-100 lg:w-1/2 lg:my-auto lg:h-full`}>
+                <nav  className={`${isCollapsed ? 'opacity-0 pointer-events-none flex h-1 flex-row' : 'flex-col h-80v w-1/2'} flex  my-auto mx-5 justify-around lg:opacity-100 md:text-4xl`}>
                     <Link  href='/'>
                         <a onClick={onMenuClick}>Home</a>
                     </Link>
@@ -53,6 +53,7 @@ function NavBar(props) {
                     </Link>
                 </nav>
             </div>
+            </ul>
         </div>
     )
 }
