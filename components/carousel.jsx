@@ -32,16 +32,18 @@ function Carousel(props) {
     let index = 0
 
     return(
-        <div className={styles.embla}>
-            <div className={styles.embla__viewport} ref={viewportRef}>
+        <div className={`${styles.embla} md:h-90v`}>
+            <div className={`${styles.embla__viewport} `} ref={viewportRef}>
                 <div className={styles.embla__container}>
                     {props.carouselList.map((image) => (
                         <div key={image.alt} className={styles.embla__slide}>
                             <Image 
                                 src={image.source} 
                                 alt={image.alt}
-                                width={3000}
-                                height={2000}
+                                width={1500}
+                                height={1000}
+                                fill={true}
+                                className='object-cover m-auto'
                             />
                         </div>
                 )
