@@ -17,9 +17,9 @@ export default function Post({postData}) {
             <p><span className='text-main-orange'>{postData.routeSampleText.slice(0,firstWordPos)}</span>{postData.routeSampleText.slice(firstWordPos)}</p>
             <p className='my-3'>Skip to the <Link href='#downloads'><a className='font-bold decoration-solid text-main-orange'>gpx</a></Link></p>
           </article>
-          <br/>
+
           <Carousel carouselList={postData.routeCarousel}/>
-          <br/>
+
           <article dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
           <article id='downloads' className='my-10'>
             <h3 className='text-xl'>Downloads</h3>
