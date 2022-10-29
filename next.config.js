@@ -5,7 +5,7 @@ const debug = process.env.NODE_ENV !== "production";
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-    images: {
+  images: {
     unoptimized: true,
   },
 }
@@ -19,5 +19,5 @@ module.exports = {
       "/ap-grid-layout": { page: "/ap-grid-layout" },
     }
   },
-  assetPrefix: !debug ? 'https://charliewillingale.github.io/hike-website-nextjs/' : '',
+  assetPrefix: !debug ? '/hike-website-nextjs/' : '',
 }
