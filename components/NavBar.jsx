@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
+import styles from '../styles/NavBar.module.css'
 
 function NavBar(props) {
 
@@ -37,8 +38,8 @@ function NavBar(props) {
                 </li>
             
 
-            <div className={`${isCollapsed ? 'opacity-0 h-1' : 'opacity-90 w-1/2 h-100v'}  bg-main-orange lg:bg-[#fff] lg:relative fixed right-0 top-0 z-20 transition-all text-2xl lg:opacity-100 lg:w-1/2 lg:my-auto lg:h-full`}>
-                <nav  className={`${isCollapsed ? 'opacity-0 pointer-events-none flex h-1 flex-row' : 'flex-col h-80v w-1/2'} flex  my-auto mx-5 justify-around lg:opacity-100 md:text-4xl`}>
+            <div className={`${isCollapsed ? styles.navBarWrapperCollapsedTrue : styles.navBarWrapperCollapsedFalse}  bg-main-orange lg:bg-[#fff] z-20 transition-all text-2xl`}>
+                <nav  className={`${isCollapsed ? styles.navBarCollapsedTrue : styles.navBarCollapsedFalse } md:text-4xl`}>
                     <Link  href='/'>
                         <a onClick={onMenuClick}>Home</a>
                     </Link>

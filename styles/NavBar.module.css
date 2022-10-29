@@ -1,0 +1,55 @@
+.navBarWrapperCollapsedTrue{
+    opacity: 0;
+    height: 0.25rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.navBarWrapperCollapsedFalse{
+    opacity: 90;
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.navBarCollapsedTrue{
+    opacity: 0;
+    pointer-events: none;
+    height: 0.25rem;
+}
+
+.navBarCollapsedFalse{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 50%;
+    margin: auto 1.25rem;
+    justify-content: space-around;
+}
+
+@media (min-width: 1024px) { 
+    .navBarWrapperCollapsedTrue,
+    .navBarWrapperCollapsedFalse{
+        opacity: 100;
+        width: 50%;
+        height: 100%;
+        margin:auto 0;
+        position: relative;
+    }
+
+    .navBarCollapsedTrue,
+    .navBarCollapsedFalse{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        opacity: 100;
+        pointer-events: auto;
+        height: auto;
+        width: 100%;
+        margin: auto;
+
+    }
+ }
