@@ -5,14 +5,14 @@ function Card(props) {
 
     const firstWordPos = props.cardSampleText.split(' ')[0].length
 
-    console.log(`${process.env.BACKEND_URL}/posts/${props.cardSlug}`)
+    console.log(props.cardImage)
 
     return(
         <section className='text-font-grey w-10/12 md:min-w-[250px] border-main-orange border-solid border-2 rounded bg-slate-700 mx-auto bg-dark-grey'>
                <article className='mx-auto my-[5.5%] min-h-[93%] w-[90%] p-3 flex flex-col justify-between bg-light-grey'>
 
                     <div>
-                        <Link href={`${process.env.BACKEND_URL}/posts/${props.cardSlug}`} className='cursor-pointer hover:text-main-orange focus:text-main-orange'>
+                        <Link href={`/posts/${props.cardSlug}`} className='cursor-pointer hover:text-main-orange focus:text-main-orange'>
                             <h3 className='strong text-xl cursor-pointer hover:text-main-orange focus:text-main-orange'>{props.cardTitle}</h3>
                         </Link>
 
