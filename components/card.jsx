@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { prefix } from '../lib/prefix'
 
 function Card(props) {
 
@@ -10,7 +11,7 @@ function Card(props) {
                <article className='mx-auto my-[5.5%] min-h-[93%] w-[90%] p-3 flex flex-col justify-between bg-light-grey'>
 
                     <div>
-                        <Link href={`/posts/${props.cardSlug}`} className='cursor-pointer hover:text-main-orange focus:text-main-orange'>
+                        <Link href={`/${prefix}/posts/${props.cardSlug}`} className='cursor-pointer hover:text-main-orange focus:text-main-orange'>
                             <h3 className='strong text-xl cursor-pointer hover:text-main-orange focus:text-main-orange'>{props.cardTitle}</h3>
                         </Link>
 
