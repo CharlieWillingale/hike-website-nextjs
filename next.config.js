@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -7,4 +8,14 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+module.exports = {
+  nextConfig,
+
+  exportPathMap: function () {
+    return {
+      "/": { page: "/" },
+      "/ap-grid-layout": { page: "/ap-grid-layout" },
+    }
+  },
+  assetPrefix: !debug ? 'https://charliewillingale.github.io/hike-website-nextjs/' : '',
+}
