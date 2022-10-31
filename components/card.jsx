@@ -10,12 +10,12 @@ function Card(props) {
                <article className='mx-auto my-[5.5%] min-h-[93%] w-[90%] p-3 flex flex-col justify-between bg-light-grey'>
 
                     <div>
-                        <Link href={`hike-website-nextjs/posts/${props.cardSlug}`} className='cursor-pointer hover:text-main-orange focus:text-main-orange'>
+                        <Link href={`/posts/${props.cardSlug}`} className='cursor-pointer hover:text-main-orange focus:text-main-orange'>
                             <h3 className='strong text-xl cursor-pointer hover:text-main-orange focus:text-main-orange'>{props.cardTitle}</h3>
                         </Link>
 
                         <Image
-                            src={props.cardImage}
+                            src={`/hike-website-nextjs/${props.cardImage}`}
                             alt={props.cardImageAlt}
                             layout='responsive'
                             height={75}
