@@ -1,11 +1,14 @@
 import Image from 'next/image'
+import {getImageRoute} from '../lib/image_utils'
+
+const imageRoute = getImageRoute()
 
 function Showcase(props) {
     return(
         <section className='flex justify-center min-h-30v sm:m-6 my-5'>
             <div className='my-auto p-1 block w-1/3'>
                 <Image 
-                    src={props.showcaseImage}
+                    src={`${imageRoute}${props.showcaseImage}`}
                     alt={props.showcaseAltTxt}
                     width={100}
                     height={100}
