@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import {getImageRoute} from '../lib/image_utils'
 
 function Card(props) {
 
     const firstWordPos = props.cardSampleText.split(' ')[0].length
-
-    console.log(process.env.NODE_ENV)
+    const imageRoute = getImageRoute()
 
     return(
         <section className='text-font-grey w-10/12 md:min-w-[250px] border-main-orange border-solid border-2 rounded bg-slate-700 mx-auto bg-dark-grey'>
@@ -16,8 +16,10 @@ function Card(props) {
                             <h3 className='strong text-xl cursor-pointer hover:text-main-orange focus:text-main-orange'>{props.cardTitle}</h3>
                         </Link>
 
+                        <p>{`${imageRoute}${props.cardImage}`}</p>
+
                         <Image
-                            src={`/hike-website-nextjs/${props.cardImage}`}
+                            src={`${imageRoute}${props.cardImage}`}
                             alt={props.cardImageAlt}
                             layout='responsive'
                             height={75}
