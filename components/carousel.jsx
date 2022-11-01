@@ -3,6 +3,9 @@ import Image from 'next/image'
 import useEmblaCarousel from 'embla-carousel-react'
 import styles from '../styles/Carousel.module.css'
 import { PrevButton, NextButton } from "./EmblaCarouselButtons";
+import {getImageRoute} from '../lib/image_utils'
+
+const imageRoute = getImageRoute()
 
 
 
@@ -38,7 +41,7 @@ function Carousel(props) {
                     {props.carouselList.map((image) => (
                         <div key={image.alt} className={styles.embla__slide}>
                             <Image 
-                                src={image.source} 
+                                src={`${imageRoute}${image.source}`} 
                                 alt={image.alt}
                                 width={1500}
                                 height={1000}

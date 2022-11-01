@@ -2,6 +2,9 @@ import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
 import styles from '../styles/NavBar.module.css'
+import {getImageRoute} from '../lib/image_utils'
+
+const imageRoute = getImageRoute()
 
 function NavBar(props) {
 
@@ -19,7 +22,7 @@ function NavBar(props) {
                 <li className='my-auto mx-5 relative w-14 md:w-24'>
                     <Link href={`/`} className='m-auto relative block'> 
                         <Image
-                            src={'/images/siteLogo.png'}
+                            src={`${imageRoute}/images/siteLogo.png`}
                             alt={'Site Logo Home Link.'}
                             width={40}
                             height={40}

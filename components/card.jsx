@@ -16,8 +16,6 @@ function Card(props) {
                             <h3 className='strong text-xl cursor-pointer hover:text-main-orange focus:text-main-orange'>{props.cardTitle}</h3>
                         </Link>
 
-                        <p>{`${imageRoute}${props.cardImage}`}</p>
-
                         <Image
                             src={`${imageRoute}${props.cardImage}`}
                             alt={props.cardImageAlt}
