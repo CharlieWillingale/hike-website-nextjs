@@ -6,6 +6,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  env: {
+    prod_filepath: '/hike-website-nextjs',
+  },
 }
 
 module.exports = nextConfig
