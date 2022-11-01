@@ -13,7 +13,7 @@ const imageRoute = getImageRoute()
 function Carousel(props) {
     
     const [viewportRef, embla] = useEmblaCarousel({ loop: false });
-    const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
+    const [prevBtnEnabled, setPrevBtnEnabled] = useState(true);
     const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
 
     const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
