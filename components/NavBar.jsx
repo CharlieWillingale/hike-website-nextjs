@@ -46,13 +46,13 @@ function NavBar(props) {
                     <Link  href='/'>
                         <a onClick={onMenuClick}>Home</a>
                     </Link>
-                    <Link href='/'>
+                    <Link href='/bike'>
                         <a onClick={onMenuClick}>Bike</a>
                     </Link>
-                    <Link href='/'>
+                    <Link href='/climb'>
                         <a onClick={onMenuClick}>Climb</a>
                     </Link>
-                    <Link href='/'>
+                    <Link href='/hike'>
                         <a onClick={onMenuClick}>Hike</a>
                     </Link>
                 </nav>
